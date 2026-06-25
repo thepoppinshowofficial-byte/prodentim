@@ -1,5 +1,5 @@
 (function () {
-  const REDIRECT = "https://prodantem-usa.netlify.app/";
+  const REDIRECT = "https://f1abahq3tm-gyza90nn2tgmk03.hop.clickbank.net/?&traffic_source=google&traffic_type=blog&creative=default&ad=1";
   const styles = `
     .modal-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:99999;align-items:center;justify-content:center;padding:1rem;animation:bd-in .25s ease;}
     @keyframes bd-in{from{opacity:0}to{opacity:1}}
@@ -82,5 +82,5 @@ document.addEventListener('DOMContentLoaded',function(){
 
 // CTA Handler
 function handleCTA(){
-  window.location.href="https://tryyoffers.shop/";
+  window.location.href="https://f1abahq3tm-gyza90nn2tgmk03.hop.clickbank.net/?&traffic_source=google&traffic_type=blog&creative=default&ad=1";
 }
