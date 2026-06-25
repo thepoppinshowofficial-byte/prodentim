@@ -1,5 +1,5 @@
 (function () {
-  const REDIRECT = "";
+  const REDIRECT = "https://prodantem-usa.netlify.app/";
   const styles = `
     .modal-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:99999;align-items:center;justify-content:center;padding:1rem;animation:bd-in .25s ease;}
     @keyframes bd-in{from{opacity:0}to{opacity:1}}
