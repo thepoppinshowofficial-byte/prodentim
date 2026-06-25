@@ -53,12 +53,10 @@
   // index.html — skip if already seen
   window.PopupIndex = function () {
     const built = buildPopup(); if (!built) return;
-    const { bd } = built;
-    bd.querySelector("#p-yes").addEventListener("click", () => {
-window.location.href = REDIRECT;
-    });
+    const { bd, close } = built;
+    bd.querySelector("#p-yes").addEventListener("click", close);
     bd.querySelector("#p-no").addEventListener("click", () => {
-window.location.href = "privacy.html";
+      window.location.href = "privacy.html";
     });
   };
 
