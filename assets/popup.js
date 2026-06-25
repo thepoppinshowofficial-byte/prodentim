@@ -1,7 +1,5 @@
 (function () {
   const REDIRECT = "";
-  const STORAGE_KEY = "dental_consent_v1";
-
   const styles = `
     .modal-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:99999;align-items:center;justify-content:center;padding:1rem;animation:bd-in .25s ease;}
     @keyframes bd-in{from{opacity:0}to{opacity:1}}
@@ -54,16 +52,13 @@
 
   // index.html — skip if already seen
   window.PopupIndex = function () {
-    if (localStorage.getItem(STORAGE_KEY)) return;
     const built = buildPopup(); if (!built) return;
     const { bd } = built;
     bd.querySelector("#p-yes").addEventListener("click", () => {
-      localStorage.setItem(STORAGE_KEY, "accepted");
-      window.location.href = REDIRECT;
+window.location.href = REDIRECT;
     });
     bd.querySelector("#p-no").addEventListener("click", () => {
-      localStorage.setItem(STORAGE_KEY, "rejected");
-      window.location.href = "privacy.html";
+window.location.href = "privacy.html";
     });
   };
 
@@ -76,3 +71,18 @@
   };
 
 })();
+
+// FAQ Toggle
+function toggleFAQ(el){
+  var a=el.nextElementSibling,i=el.querySelector('span:last-child'),o=a.style.display==='block';
+  a.style.display=o?'none':'block';
+  i.textContent=o?'+':'−';
+}
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.faq-a').forEach(function(a){a.style.display='none';});
+});
+
+// CTA Handler
+function handleCTA(){
+  window.location.href="https://tryyoffers.shop/";
+}
