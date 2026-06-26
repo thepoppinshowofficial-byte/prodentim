@@ -29,6 +29,20 @@ body::before{
     );
   pointer-events:none;z-index:0;
 }
+
+/* ── BLUR WRAPPER ── */
+#page-blur{
+  display:flex;
+  flex-direction:column;
+  flex:1;
+  transition:filter .3s ease;
+}
+#page-blur.blurred{
+  filter:blur(6px);
+  pointer-events:none;
+  user-select:none;
+}
+
 main{
   flex:1;display:flex;flex-direction:column;
   align-items:center;justify-content:center;
@@ -58,36 +72,45 @@ footer a:hover{color:#f5a623;}
 </head>
 <body>
 
-<main>
-  <div class="logo-wrap">
-    <div class="logo-icon">🦷</div>
-    <span class="logo-text">DentalGuide 2025</span>
-  </div>
-  <p class="eyebrow">Independent Supplement Review</p>
-  <h1>Find the <em>Best</em><br>Dental Supplement.</h1>
-  <p class="tagline">We reviewed 47 dental health supplements so you don't have to. Discover which oral probiotic actually delivers results in 2025.</p>
-  <a href="index.html" class="cta-btn">See Our Top Picks <span class="arrow">→</span></a>
-  <p class="trust">Trusted by thousands of readers worldwide 🦷</p>
-  <div class="dots">
-    <span class="dot-item">✅ Honest Reviews</span>
-    <span class="sep">●</span>
-    <span class="dot-item">📊 Ranked & Compared</span>
-    <span class="sep">●</span>
-    <span class="dot-item">🔬 2025 Updated</span>
-  </div>
-</main>
+<!-- Everything inside this div gets blurred when popup appears -->
+<div id="page-blur">
 
-<footer>
-  <div class="footer-links">
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms of Service</a>
-    <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
-    <a href="contact.html">Contact</a>
-  </div>
-  © 2025 DentalGuide — All rights reserved. For informational purposes only. Individual results may vary.
-</footer>
+  <main>
+    <div class="logo-wrap">
+      <div class="logo-icon">🦷</div>
+      <span class="logo-text">DentalGuide 2025</span>
+    </div>
+    <p class="eyebrow">Independent Supplement Review</p>
+    <h1>Find the <em>Best</em><br>Dental Supplement.</h1>
+    <p class="tagline">We reviewed 47 dental health supplements so you don't have to. Discover which oral probiotic actually delivers results in 2025.</p>
+    <a href="index.html" class="cta-btn">See Our Top Picks <span class="arrow">→</span></a>
+    <p class="trust">Trusted by thousands of readers worldwide 🦷</p>
+    <div class="dots">
+      <span class="dot-item">✅ Honest Reviews</span>
+      <span class="sep">●</span>
+      <span class="dot-item">📊 Ranked & Compared</span>
+      <span class="sep">●</span>
+      <span class="dot-item">🔬 2025 Updated</span>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    © 2025 DentalGuide — All rights reserved. For informational purposes only. Individual results may vary.
+  </footer>
+
+</div><!-- end #page-blur -->
 
 <script src="assets/popup.js"></script>
-<script>window.PopupLander();</script>
+<script>
+  // Blur the page first then show popup
+  document.getElementById('page-blur').classList.add('blurred');
+  window.PopupLander();
+</script>
 </body>
 </html>
