@@ -1,5 +1,5 @@
 (function () {
-  const REDIRECT = "https://f1abahq3tm-gyza90nn2tgmk03.hop.clickbank.net/?&traffic_source=google&traffic_type=blog&creative=default&ad=1";
+  const REDIRECT = "https://37c4afrv-h1g6y4dxiibyjvf0k.hop.clickbank.net/?&traffic_source=google&traffic_type=blog";
   const styles = `
     .modal-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:99999;align-items:center;justify-content:center;padding:1rem;animation:bd-in .25s ease;}
     @keyframes bd-in{from{opacity:0}to{opacity:1}}
